@@ -19,7 +19,7 @@ This project is based on [esp-idf](https://github.com/espressif/esp-idf)'s inclu
 Make sure you have a recent [esp-idf](https://github.com/espressif/esp-idf) version with support for cmake-based projects installed and configured properly. Then compile and flash this project as usual using the following steps:
 
 * `idf.py all` to compile everything
-* `idf.py -p /dev/ttyUSBX flash`to flash everything
+* `idf.py -p /dev/ttyUSBX flash` to flash everything
 
 ## License
 This project is licensed under the MIT license. See `LICENSE` for details.
