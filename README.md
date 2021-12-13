@@ -14,6 +14,10 @@ This project is based on [esp-idf](https://github.com/espressif/esp-idf)'s inclu
 * Click `Browse...`, select a firmware file (e.g. `esp32-softap-ota.bin`) and click `Upload`. 
 * The website will upload the file and display the upload progress. If the upload is succesful and the app image is valid (magic byte), the ESP32 will reboot into the new firmware.
 * Always make sure the images you upload *also contain the update functionality*, otherwise you will lose the ability to OTA-update your ESP32.
+* Instead of using the builtin website, you may also upload firmware images with [cURL](https://curl.se/):
+```
+curl --progress-bar -X POST --data-binary @build/esp32-softap-ota.bin http://192.168.4.1/update  | tee /dev/null
+```
 
 ## Initial Build and Flash
 Make sure you have a recent [esp-idf](https://github.com/espressif/esp-idf) version with support for cmake-based projects installed and configured properly. Then compile and flash this project as usual using the following steps:
