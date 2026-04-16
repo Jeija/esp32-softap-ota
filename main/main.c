@@ -127,7 +127,7 @@ static esp_err_t softap_init(void)
 	};
 
 	res |= esp_wifi_set_mode(WIFI_MODE_AP);
-	res |= esp_wifi_set_config(ESP_IF_WIFI_AP, &wifi_config);
+	res |= esp_wifi_set_config(WIFI_IF_AP, &wifi_config);
 	res |= esp_wifi_start();
 
 	return res;
